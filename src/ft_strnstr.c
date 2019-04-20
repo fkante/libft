@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 10:35:13 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 15:14:45 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/20 17:12:06 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *pile, const char *needle, size_t len)
 {
 	int i;
 	int y;
-	
+
 	if (!pile || !needle)
 		return (NULL);
 	if (!len)

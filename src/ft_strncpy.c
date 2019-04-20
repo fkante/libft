@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 17:24:24 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 15:14:03 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/20 17:11:40 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 
 	i = 0;
 	if (ft_strlen(dst) < ft_strlen(src))
-			return (0);
+		return (0);
 	while (src[i] && i < len)
 	{
 		dst[i] = src[i];

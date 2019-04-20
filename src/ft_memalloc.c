@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:56:50 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 14:25:18 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/20 17:06:30 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_memalloc(size_t size)
 
 	tmp = (char*)malloc(sizeof(char) * size);
 	if (tmp == NULL)
-		return(NULL);
-	return(tmp);
+		return (NULL);
+	return (tmp);
 }

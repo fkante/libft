@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 15:45:06 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 15:08:35 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/20 17:09:32 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strequ(char const *s1, char const *s2)
 {
 	int i;
-	
+
 	if (s1 == NULL || s2 == NULL)
 		return (0);
 	i = 0;

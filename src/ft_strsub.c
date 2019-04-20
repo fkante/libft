@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 16:01:48 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 15:15:48 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/20 17:12:38 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	char *tmp;
+	int		i;
+	char	*tmp;
 
 	if (s == NULL)
 		return (NULL);
