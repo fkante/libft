@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 10:24:25 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/23 10:15:20 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 15:12:27 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,15 @@ char	*ft_itoa(int n)
 	{
 		n = -n;
 		size = ft_size(n, i) + 1;
-		tmp = ft_memalloc(size);
+		if (!(tmp = ft_memalloc(size)))
+			return (NULL);
 		tmp[i++] = '-';
 	}
 	else
 	{
 		size = ft_size(n, i);
-		tmp = ft_memalloc(size);
+		if (!(tmp = ft_memalloc(size)))
+			return (NULL);
 	}
 	tmp = ft_fill_tmp(i, n, size, tmp);
 	return (ft_swap(tmp));

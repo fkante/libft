@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 17:23:59 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 15:06:48 by fkante           ###   ########.fr       */
+/*   Created: 2019/04/24 11:59:43 by fkante            #+#    #+#             */
+/*   Updated: 2019/04/24 14:55:36 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int i;
-	int neg;
-	int t;
-
-	t = 0;
-	i = 0;
-	neg = 1;
-	while ((str[i] >= 0 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
-		neg = -neg;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (f)
 	{
-		t = t * 10 + (str[i] - '0');
-		i++;
+		while (lst != NULL)
+		{
+			f(lst);
+			lst = lst->next;
+		}
 	}
-	return (t * neg);
 }

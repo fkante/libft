@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 17:23:59 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 15:06:48 by fkante           ###   ########.fr       */
+/*   Created: 2019/04/24 11:48:31 by fkante            #+#    #+#             */
+/*   Updated: 2019/04/24 14:52:27 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int i;
-	int neg;
-	int t;
-
-	t = 0;
-	i = 0;
-	neg = 1;
-	while ((str[i] >= 0 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
-		neg = -neg;
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (alst != NULL && new != NULL)
 	{
-		t = t * 10 + (str[i] - '0');
-		i++;
+		new->next = *alst;
+		*alst = new;
 	}
-	return (t * neg);
 }
