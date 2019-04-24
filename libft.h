@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 12:58:24 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 15:13:51 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 16:39:35 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_fill_tmp(int i, int n, int size, char *tmp);
 int		ft_size(int n, int t);
 char	*ft_itoa(int n);
 void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstnew(void const *content, size_t content_size);
