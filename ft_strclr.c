@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 10:33:16 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 15:16:11 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 18:12:14 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 	int i;
 	int t;
 
+	if (s == NULL)
+		return ;
 	t = ft_strlen(s);
 	i = 0;
 	while (i < t)
@@ -24,4 +26,5 @@ void	ft_strclr(char *s)
 		s[i] = '\0';
 		i++;
 	}
+	s[i] = '\0';
 }

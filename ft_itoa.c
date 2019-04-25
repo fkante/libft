@@ -6,13 +6,13 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 10:24:25 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 15:12:27 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 19:55:38 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_swap(char *c)
+static char		*swap(char *c)
 {
 	int		i;
 	int		y;
@@ -33,7 +33,7 @@ char	*ft_swap(char *c)
 	return (c);
 }
 
-char	*ft_fill_tmp(int i, int n, int size, char *tmp)
+static char		*fill_tmp(int i, int n, int size, char *tmp)
 {
 	while (i < size)
 	{
@@ -44,17 +44,17 @@ char	*ft_fill_tmp(int i, int n, int size, char *tmp)
 	return (tmp);
 }
 
-int		ft_size(int n, int t)
+static int		tmp_size(int n, int t)
 {
 	if (n > 9)
 	{
 		t++;
-		return (ft_size(n / 10, t));
+		return (tmp_size(n / 10, t));
 	}
 	return (t + 1);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		i;
 	int		size;
@@ -66,17 +66,17 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		n = -n;
-		size = ft_size(n, i) + 1;
-		if (!(tmp = ft_memalloc(size)))
+		size = tmp_size(n, i) + 1;
+		if (!(tmp = (char *)malloc(size + 1)))
 			return (NULL);
 		tmp[i++] = '-';
 	}
 	else
 	{
-		size = ft_size(n, i);
-		if (!(tmp = ft_memalloc(size)))
+		size = tmp_size(n, i);
+		if (!(tmp = (char *)malloc(size + 1)))
 			return (NULL);
 	}
-	tmp = ft_fill_tmp(i, n, size, tmp);
-	return (ft_swap(tmp));
+	tmp = fill_tmp(i, n, size, tmp);
+	return (swap(tmp));
 }

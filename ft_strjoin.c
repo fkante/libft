@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 16:52:37 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 17:09:50 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/25 10:30:21 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	tmp = ft_memalloc(len1 + len2 + 1);
+	if (!(tmp = (char *)malloc(len1 + len2 + 1)))
+		return (NULL);
 	while (i < len1)
 	{
 		tmp[i] = s1[i];

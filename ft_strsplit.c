@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 10:35:22 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/23 11:26:11 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 19:23:07 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static int	countword(char const *s, char c)
 
 	count = 0;
 	i = 0;
+	state = 0;
 	while (s[i])
 	{
 		if (s[i + 1] == c)

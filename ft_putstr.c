@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 16:39:52 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 14:34:05 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/25 10:07:22 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_putstr(const char *str)
 {
-	size_t l;
-
-	l = ft_strlen(str);
-	write(1, str, l);
+	ft_putstr_fd(str, 1);
 }

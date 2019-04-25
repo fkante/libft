@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:11:30 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/20 14:27:07 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/25 10:06:37 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 void	*ft_memset(void *buff, int c, size_t len)
 {
-	if (!buff)
-		return (NULL);
+	if (len == 0)
+		return (buff);
 	while (--len)
 		((unsigned char*)buff)[len] = (unsigned char)c;
 	((unsigned char*)buff)[len] = (unsigned char)c;

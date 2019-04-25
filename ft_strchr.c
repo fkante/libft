@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 12:23:48 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/21 17:02:27 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 18:41:11 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 
-	if (s == NULL)
-		return (NULL);
 	if (c == 0)
 		return ((char*)s + ft_strlen(s));
 	i = 0;

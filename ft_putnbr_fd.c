@@ -6,23 +6,23 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 16:47:02 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/22 17:54:08 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/24 19:21:12 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
-static void	ft_min(int n, int fd)
+static void	ft_min(int fd)
 {
-	n = 0;
 	write(fd, "-2147483648", 11);
 }
 
 void		ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
-		ft_min(n, fd);
+		ft_min(fd);
 		return ;
 	}
 	if (n < 0)
