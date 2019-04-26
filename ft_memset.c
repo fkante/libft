@@ -6,15 +6,11 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:11:30 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/25 10:06:37 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 15:35:09 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	Think to do it with binary masks.
-*/
 
 void	*ft_memset(void *buff, int c, size_t len)
 {
