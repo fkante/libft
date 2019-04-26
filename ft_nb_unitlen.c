@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_nb_unitlen.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 11:27:49 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/25 12:11:29 by fkante           ###   ########.fr       */
+/*   Created: 2019/04/26 08:57:55 by fkante            #+#    #+#             */
+/*   Updated: 2019/04/26 09:06:10 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+size_t	ft_nb_unitlen(intmax_t n, size_t base)
 {
-	ft_putendl_fd(s, 1);
+	size_t		length;
+	uintmax_t	nb;
+
+	if (n == 0)
+		return (1);
+	length = 0;
+	if (n < 0)
+	{
+		nb = -n;
+		length++;
+	}
+	else
+		nb = n;
+	if (base == 0)
+		base = 10;
+	while (nb != 0)
+	{
+		nb /= base;
+		length++;
+	}
+	return (length);
 }

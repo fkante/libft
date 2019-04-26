@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/24 16:25:10 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 19:22:20 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/25 12:32:19 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 		free(tmp);
 		tmp = NULL;
 	}
-	*alst = NULL;
+	alst = NULL;
 }

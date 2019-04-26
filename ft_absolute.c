@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_absolute.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 11:27:49 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/25 12:11:29 by fkante           ###   ########.fr       */
+/*   Created: 2019/04/26 09:13:58 by fkante            #+#    #+#             */
+/*   Updated: 2019/04/26 09:15:40 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+size_t	ft_absolute(int nb)
 {
-	ft_putendl_fd(s, 1);
+	if (nb >= 0)
+		return (nb);
+	else
+		return (-nb);
 }

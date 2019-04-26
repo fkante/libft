@@ -6,7 +6,7 @@
 #    By: fkante <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/19 17:11:38 by fkante            #+#    #+#              #
-#    Updated: 2019/04/24 19:16:42 by fkante           ###   ########.fr        #
+#    Updated: 2019/04/26 09:20:03 by fkante           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SRCS += ft_lstdel.c
 SRCS += ft_lstdelone.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstnew.c
+SRCS += ft_lstmap.c
+SRCS += ft_lstfindone.c
 SRCS += ft_memalloc.c
 SRCS += ft_memccpy.c
 SRCS += ft_memchr.c
@@ -75,6 +77,10 @@ SRCS += ft_strsub.c
 SRCS += ft_strtrim.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
+SRCS += ft_swap.c
+SRCS += ft_nb_unitlen.c
+SRCS += ft_absolute.c
+SRCS += ft_fibonacci.c
 OBJS += $(patsubst %.c, $(BUILD_DIR)%.o, $(SRCS))
 
 all: $(NAME)

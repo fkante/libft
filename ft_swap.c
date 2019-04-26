@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 11:27:49 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/25 12:11:29 by fkante           ###   ########.fr       */
+/*   Created: 2019/04/25 14:27:05 by fkante            #+#    #+#             */
+/*   Updated: 2019/04/26 09:05:04 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_swap(void *one, void *two, size_t size)
 {
-	ft_putendl_fd(s, 1);
+	char	tmp;
+	size_t	i;
+
+	i = -1;
+	while (++i < size)
+	{
+		tmp = *(char*)(one + i);
+		*(char*)(one + i) = *(char*)(two + i);
+		*(char*)(two + i) = tmp;
+	}
 }

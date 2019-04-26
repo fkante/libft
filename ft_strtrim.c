@@ -6,36 +6,30 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:44:43 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/25 10:22:07 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 08:47:43 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	int		start;
-	int		end;
-	int		i;
-	char	*trim_out;
+	size_t	size;
+	size_t	end;
+	char	*trim_new;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
-	start = 0;
-	end = ft_strlen(s) - 1;
-	if (!(trim_out = (char *)malloc(end + 1)))
+	while (*s == ' ' || *s == '\n' || *s == '\t')
+		s++;
+	if (*s == '\0')
+		return (ft_memalloc(1));
+	end = 0;
+	size = ft_strlen(s);
+	while (s[size - end - 1] == ' ' || s[size - end - 1] == '\n'
+			|| s[size - end - 1] == '\t')
+		end++;
+	if (!(trim_new = ft_strsub(s, 0, size - end)))
 		return (NULL);
-	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
-		start++;
-	while (s[end] == ' ' || s[end] == '\n' || s[end] == '\t')
-		end--;
-	while (start <= end)
-	{
-		trim_out[i] = s[start];
-		i++;
-		start++;
-	}
-	trim_out[i] = '\0';
-	return (trim_out);
+	return (trim_new);
 }
