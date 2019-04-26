@@ -6,7 +6,7 @@
 #    By: fkante <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/19 17:11:38 by fkante            #+#    #+#              #
-#    Updated: 2019/04/26 09:20:03 by fkante           ###   ########.fr        #
+#    Updated: 2019/04/26 14:41:31 by fkante           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,13 +85,13 @@ OBJS += $(patsubst %.c, $(BUILD_DIR)%.o, $(SRCS))
 
 all: $(NAME)
 
-$(NAME): $(BUILD_DIR) $(OBJS) $(HEAD)
+$(NAME): $(BUILD_DIR) $(OBJS)
 	$(AR) $@ $(OBJS)
 
 $(BUILD_DIR):
 	mkdir $@
 
-$(OBJS): $(BUILD_DIR)%.o: %.c $(HEAD)
+$(OBJS): $(BUILD_DIR)%.o: %.c $(HEAD) Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

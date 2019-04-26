@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 10:24:25 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 19:55:38 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 15:19:20 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int		tmp_size(int n, int t)
 	}
 	return (t + 1);
 }
-
+/*
 char			*ft_itoa(int n)
 {
 	int		i;
@@ -78,5 +78,25 @@ char			*ft_itoa(int n)
 			return (NULL);
 	}
 	tmp = fill_tmp(i, n, size, tmp);
+	return (swap(tmp));
+}*/
+
+char			*ft_itoa(int n)
+{
+	int		size;
+	char	*tmp;
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	size = n < 0 ? tmp_size(-n, 0) + 1 : tmp_size(n, 0);
+	if (!(tmp = (char *)malloc(size + 1)))
+		return (NULL);
+	if (n < 0)
+	{
+		*tmp = '-';
+		tmp = fill_tmp(1, -n, size, tmp);
+	}
+	else
+		tmp = fill_tmp(0, n, size, tmp);
 	return (swap(tmp));
 }

@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 12:58:24 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/26 09:52:43 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 14:40:40 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-void				ft_swap(void *one, void *two, size_t size);
-size_t				ft_nb_unitlen(intmax_t n, size_t base);
+void				ft_swap(void **one, void **two);
+size_t				ft_nb_unitlen(int nb);
 size_t				ft_absolute(int nb);
 int					ft_fibonacci(int index);
 

@@ -6,22 +6,17 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/25 14:27:05 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/26 09:05:04 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 13:42:56 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(void *one, void *two, size_t size)
+void	ft_swap(void **one, void **two)
 {
-	char	tmp;
-	size_t	i;
+	char	*tmp;
 
-	i = -1;
-	while (++i < size)
-	{
-		tmp = *(char*)(one + i);
-		*(char*)(one + i) = *(char*)(two + i);
-		*(char*)(two + i) = tmp;
-	}
+	tmp = *(char **)one;
+	*(char **)one = *(char **)two;
+	*(char **)two = tmp;
 }

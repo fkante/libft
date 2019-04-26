@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 08:50:26 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/26 09:08:25 by fkante           ###   ########.fr       */
+/*   Updated: 2019/04/26 14:04:47 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstfindone(t_list *lst, size_t rank)
 	t_list	*lst_found;
 	size_t	i;
 
+	if (!lst)
+		return (NULL);
 	lst_found = lst;
 	i = 0;
 	while (i < rank)
