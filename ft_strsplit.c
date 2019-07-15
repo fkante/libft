@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 10:35:22 by fkante            #+#    #+#             */
-/*   Updated: 2019/04/24 19:23:07 by fkante           ###   ########.fr       */
+/*   Updated: 2019/07/15 15:55:38 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static char	**free_s(char **s, size_t i)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char	**tmp;
+	char	**str_splited;
 	int		nb_word;
 	int		nb_char;
 	int		index;
@@ -70,18 +70,18 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	nb_word = countword(s, c);
 	index = 0;
-	if (!(tmp = (char**)ft_memalloc((nb_word + 1) * sizeof(char*))))
+	if (!(str_splited = (char**)ft_memalloc((nb_word + 1) * sizeof(char*))))
 		return (NULL);
 	while (index < nb_word - 1)
 	{
 		while (*s == c)
 			s++;
 		nb_char = countchar(s, c);
-		if (!(tmp[index] = ft_strsub(s, 0, nb_char)))
-			return (free_s(tmp, index));
+		if (!(str_splited[index] = ft_strsub(s, 0, nb_char)))
+			return (free_s(str_splited, index));
 		s = s + nb_char;
 		index++;
 	}
-	tmp[index] = NULL;
-	return (tmp);
+	str_splited[index] = NULL;
+	return (str_splited);
 }
