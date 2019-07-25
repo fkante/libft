@@ -6,7 +6,7 @@
 /*   By: fkante <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 16:52:37 by fkante            #+#    #+#             */
-/*   Updated: 2019/07/15 15:08:30 by fkante           ###   ########.fr       */
+/*   Updated: 2019/07/25 12:00:32 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*tmp;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (0);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
 	i = 0;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
