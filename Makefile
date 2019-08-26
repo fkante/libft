@@ -6,7 +6,7 @@
 #    By: fkante <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/19 17:11:38 by fkante            #+#    #+#              #
-#    Updated: 2019/05/09 12:30:47 by fkante           ###   ########.fr        #
+#    Updated: 2019/07/31 11:18:56 by fkante           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ SRCS += ft_nb_unitlen.c
 SRCS += ft_absolute.c
 SRCS += ft_fibonacci.c
 SRCS += ft_memjoin_str.c
+SRCS += ft_sqrt.c
 OBJS += $(patsubst %.c, $(BUILD_DIR)%.o, $(SRCS))
 
 all: $(NAME)
