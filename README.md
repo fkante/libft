@@ -280,6 +280,17 @@ Ils sont definis par la structure suivante:
 #### vct_sub
 > Renvoie un nouveau vecteur étant la suvdivision d'un autre.
 
+### #Dynamic Arrays (Amartino/Fkante)
+
+	typedef struct	s_darray
+	{
+		size_t		end;
+		size_t		max;
+		size_t		sizeof_elem;
+		size_t		expand_rate;
+		void		**contents;
+    }               t_darray;
+
 ### #Autres Fonctions
 Reproduction de fonctions de la lib C :
 
