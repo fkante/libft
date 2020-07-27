@@ -287,9 +287,9 @@ Il faut ajouter la fonction dans `del_function.c`.\
 AUCUNE FUITE NE PEUT ÊTRE TOLÉRÉE.\
 Lorsque vous appelez `darray_clear_content` ou `darray_clear_destroy`, transmettez la fonction del que vous avez créée.
 
-`max` est le nombre de bloc initialement malloc
-`end` est l'index qui définit le dernier élément attribué
-`sizeof_elem` est la taille d'octet de chaque élément du contenu
+`max` est le nombre de bloc initialement malloc\
+`end` est l'index qui définit le dernier élément attribué\
+`sizeof_elem` est la taille d'octet de chaque élément du contenu\
 `expand_rate` quand `end` >= `max`, alors nous étendons le tableau par le `expand_rate`
 
 	typedef struct	s_darray
