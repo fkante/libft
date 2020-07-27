@@ -237,11 +237,11 @@ Ils sont definis par la structure suivante:
 #### vct_increase_scale
 > Augmente la taille du bloc allouée pour le vecteur.
 #### vct_join
-> Joins les chaines contenues dans deux vecteurs dans un nouveau vecteur.
+> Joins les chaînes contenues dans deux vecteurs dans un nouveau vecteur.
 #### vct_joinfree
-> Joins les chaines contenues dans deux vecteurs dans un nouveau vecteur et libère l'un, l'autre ou les deux.
+> Joins les chaînes contenues dans deux vecteurs dans un nouveau vecteur et libère l'un, l'autre ou les deux.
 #### vct_len
-> Renvoie la taille de la chaine contenue dans un vecteur.
+> Renvoie la taille de la chaîne contenue dans un vecteur.
 #### vct_ndup
 > Duplique un vecteur sur au maximum n octets.
 #### vct_ndup_from
@@ -250,7 +250,7 @@ Ils sont definis par la structure suivante:
 > Initialise un nouveau vecteur de la taille passée en paramètre.
 > Si la taille est de 0, la taille sera initialisée à la valeur définie par VCT_DEFAULT_SIZE.
 #### vct_newstr
-> Initialise un nouveau vecteur avec la chaine passée en paramètre.
+> Initialise un nouveau vecteur avec la chaîne passée en paramètre.
 #### vct_pop
 > Supprime un nombre de charactères passé en paramètre de la fin du vecteur.
 #### vct_pop_from
@@ -262,7 +262,7 @@ Ils sont definis par la structure suivante:
 #### vct_print_tab
 > Ecrit sur la sortie standard un tableau de vecteurs avec un '\n'.
 #### vct_pushstr
-> Ajoute une chaine de caractère au début du vecteur.
+> Ajoute une chaîne de caractère au début du vecteur.
 #### vct_read_line
 > Alloue une ligne lue depuis un file descriptor.
 #### vct_replace_char
@@ -270,13 +270,13 @@ Ils sont definis par la structure suivante:
 #### vct_replace_char_at
 > Remplace le charactères à l'indice donné dans une string par le charactère passé en paramètre.
 #### vct_replace_str
-> Remplace toutes les occurences de la chaine de caractère donnée 'str' d'un vecteur par la chaine de caractère passée en paramètre 'replace'.
+> Remplace toutes les occurences de la chaîne de caractère donnée 'str' d'un vecteur par la chaîne de caractère passée en paramètre 'replace'.
 #### vct_split
-> Divise la chaine de caractère contenue dans le vecteur à chaque occurence du caractère passé en paramètre. La fonction retourne un pointeur sur le tableau de vecteurs crée.
+> Divise la chaîne de caractère contenue dans le vecteur à chaque occurence du caractère passé en paramètre. La fonction retourne un pointeur sur le tableau de vecteurs crée.
 #### vct_strequ
-> Compare les chaines de caractère de deux vecteurs.
+> Compare les chaînes de caractère de deux vecteurs.
 #### vct_strnequ
-> Compare les chaines de caractère de deux vecteurs jusqu'à l'indice donné.
+> Compare les chaînes de caractère de deux vecteurs jusqu'à l'indice donné.
 #### vct_sub
 > Renvoie un nouveau vecteur étant la suvdivision d'un autre.
 
@@ -300,6 +300,11 @@ Lorsque vous appelez `darray_clear_content` ou `darray_clear_destroy`, transmett
 		size_t		expand_rate;
 		void		**contents;
     }               t_darray;
+
+#### darray_clear_content
+> Supprime le contenu du tableau.
+#### darray_set
+> Assigne le pointeur passé en paramètre à l'indice specifié dans le tableau.
 
 ### #Autres Fonctions
 Reproduction de fonctions de la lib C :
