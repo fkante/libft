@@ -282,8 +282,10 @@ Ils sont definis par la structure suivante:
 
 ### #Dynamic Arrays (Amartino/Fkante)
 Les tableaux dynamiques sont agnostiques de ce qu'il y a dans le contenu.\
-Vous devrez lui passer en paramètre la fonction de nettoyage appropriée. AUCUNE FUITE NE PEUT ÊTRE TOLÉRÉE.\
-Il faut ajouter la fonction dans `del_function.c`. Lorsque vous appelez `darray_clear_content` ou `darray_clear_destroy`, transmettez la fonction del que vous avez créée.\
+Vous devrez lui passer en paramètre la fonction de nettoyage appropriée.\
+Il faut ajouter la fonction dans `del_function.c`.\
+AUCUNE FUITE NE PEUT ÊTRE TOLÉRÉE.\
+Lorsque vous appelez `darray_clear_content` ou `darray_clear_destroy`, transmettez la fonction del que vous avez créée.
 
 `max` est le nombre de bloc initialement malloc
 `end` est l'index qui définit le dernier élément attribué
