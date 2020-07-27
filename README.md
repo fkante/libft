@@ -267,8 +267,18 @@ Ils sont definis par la structure suivante:
 > Alloue une ligne lue depuis un file descriptor.
 #### vct_replace_char
 > Remplace tous les charactères donnés dans une string par le charactère passé en paramètre.
-#### vct_replace_char
-> Remplace tous les charactères donnés dans une string par le charactère passé en paramètre.
+#### vct_replace_char_at
+> Remplace le charactères à l'indice donné dans une string par le charactère passé en paramètre.
+#### vct_replace_str
+> Remplace toutes les occurences de la chaine de caractère donnée 'str' d'un vecteur par la chaine de caractère passée en paramètre 'replace'.
+#### vct_split
+> Divise la chaine de caractère contenue dans le vecteur à chaque occurence du caractère passé en paramètre. La fonction retourne un pointeur sur le tableau de vecteurs crée.
+#### vct_strequ
+> Compare les chaines de caractère de deux vecteurs.
+#### vct_strnequ
+> Compare les chaines de caractère de deux vecteurs jusqu'à l'indice donné.
+#### vct_sub
+> Renvoie un nouveau vecteur étant la suvdivision d'un autre.
 
 ### #Autres Fonctions
 Reproduction de fonctions de la lib C :
