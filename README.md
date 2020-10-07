@@ -170,7 +170,7 @@ Reproduction de la fonction printf
 
 
 ## Partie Personnelle
-### #String Vectors (Amartino/Fkante)
+### String Vectors (Amartino/Fkante)
 Un vecteur est ici un conteneur qui peut contenir une string.
 Toutes les allocations, redimensionnements et optimisations de la taille du conteneur
 sont gérés en interne par les fonctions elle-mêmes.
@@ -280,7 +280,7 @@ Ils sont definis par la structure suivante:
 #### vct_sub
 > Renvoie un nouveau vecteur étant la suvdivision d'un autre.
 
-### #Dynamic Arrays (Amartino/Fkante)
+### Dynamic Arrays (Amartino/Fkante)
 Les tableaux dynamiques sont agnostiques de ce qu'il y a dans le contenu.\
 Vous devrez lui passer en paramètre la fonction de nettoyage appropriée.\
 Il faut ajouter la fonction dans `del_function.c`.\
@@ -306,7 +306,7 @@ Lorsque vous appelez `darray_clear_content` ou `darray_clear_destroy`, transmett
 #### darray_set
 > Assigne le pointeur passé en paramètre à l'indice specifié dans le tableau.
 
-### #Autres Fonctions
+### Autres Fonctions
 Reproduction de fonctions de la lib C :
 
 #### ft_itoa_base
